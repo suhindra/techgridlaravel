@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title> techgrid challange</title>
 
     <!-- Bootstrap Core CSS -->
     {{ HTML::style('assets/css/bootstrap.min.css') }}
@@ -64,13 +64,13 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Barang<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Buku<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="viewbarang">Daftar Barang</a>
+                                    <a href="booklist">Daftar Buku</a>
                                 </li>
                                 <li>
-                                    <a href="inputbarang">Masukan Barang</a>
+                                    <a href="newbook">Masukan Buku</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -87,9 +87,17 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Barang</h1>
+                        <h1 class="page-header">Buku</h1>
                     </div>
-                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                        <div class="form-group">
+                    @yield('content')
+                        </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.row -->
             </div>

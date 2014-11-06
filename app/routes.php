@@ -20,6 +20,26 @@ Route::get('/', function()
     }
 });
 
-	Route::post('register', 'LoginController@register');
-	Route::post('login', 'LoginController@index');
-	Route::get('logout', 'LoginController@logout');
+Route::get('newbook', function()
+{
+	return View::make('newbook');
+});
+
+Route::post('book/insert', 'BookController@store');
+
+Route::get('book/edit/{id}', 'BookController@edit');
+
+Route::get('booklist', function(){
+	$books = Book::all();
+	return View::make('listbook')->with('booksdata', $books);
+});
+
+Route::get('book/delete/{id}', 'BookController@delete');
+
+Route::post('book/update', 'BookController@update');
+
+Route::post('register', 'LoginController@register');
+
+Route::post('login', 'LoginController@index');
+
+Route::get('logout', 'LoginController@logout');
